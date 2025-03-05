@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3072F90F-24D3-4605-AED2-A0B78570B32F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Changelog.md = Changelog.md
+		Readme.md = Readme.md
+		Build\Build.Configuration.cs = Build\Build.Configuration.cs
+	EndProjectSection
+EndProject
+Project("{486268EC-BF3D-4677-AE7E-0965AE55BC8D}") = "Build", "build\Build.csproj", "{D9F419A3-E721-48F4-BEE9-33D95569C093}"
+EndProject
+Project("{486268EC-BF3D-4677-AE7E-0965AE55BC8D}") = "Installer", "install\Installer.csproj", "{51CB56FD-080F-4206-8ECD-7C1D38466FF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug R20|Any CPU = Debug R20|Any CPU
+		Debug R21|Any CPU = Debug R21|Any CPU
+		Debug R22|Any CPU = Debug R22|Any CPU
+		Debug R23|Any CPU = Debug R23|Any CPU
+		Debug R24|Any CPU = Debug R24|Any CPU
+		Debug R25|Any CPU = Debug R25|Any CPU
+		Release R20|Any CPU = Release R20|Any CPU
+		Release R21|Any CPU = Release R21|Any CPU
+		Release R22|Any CPU = Release R22|Any CPU
+		Release R23|Any CPU = Release R23|Any CPU
+		Release R24|Any CPU = Release R24|Any CPU
+		Release R25|Any CPU = Release R25|Any CPU
+		Installer|Any CPU = Installer|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R20|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R21|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R22|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R23|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R24|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R25|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R20|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R21|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R22|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R23|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R24|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R25|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Installer|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R20|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R21|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R22|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R23|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R24|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R25|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R20|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R21|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R22|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R23|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R24|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R25|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Installer|Any CPU.ActiveCfg = Release|Any CPU
+		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Installer|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

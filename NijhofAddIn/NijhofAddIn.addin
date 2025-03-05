@@ -1,0 +1,11 @@
+﻿<RevitAddIns>
+    <AddIn Type="Application">
+        <Name>NijhofAddIn</Name>
+        <Assembly>NijhofAddIn/NijhofAddIn.dll</Assembly>
+        <AddInId>F2EF79B2-6EF4-4B5D-AA6F-E1E0A6616CBD</AddInId>
+        <FullClassName>NijhofAddIn.Application</FullClassName>
+        <VendorId>Development</VendorId>
+        <VendorDescription></VendorDescription>
+        <VendorEmail></VendorEmail>
+    </AddIn>
+</RevitAddIns>
