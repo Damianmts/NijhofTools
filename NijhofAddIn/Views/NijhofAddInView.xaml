@@ -5,19 +5,52 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:viewModel="clr-namespace:NijhofAddIn.ViewModels"
+    xmlns:models="clr-namespace:NijhofAddIn.Models"
     mc:Ignorable="d"
     d:DataContext="{d:DesignInstance viewModel:NijhofAddInViewModel}"
-    ResizeMode="NoResize"
+    ResizeMode="CanResize"
     WindowStartupLocation="CenterScreen"
     Title="NijhofAddIn"
-    Height="450"
-    Width="800">
-    
+    Height="600"
+    Width="1000">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Themes/SidebarTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-        <TextBlock
-            Text="NijhofAddIn"
-            FontSize="60"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="/NijhofAddIn;component/Resources/Icons/NijhofLogo.png" 
+                                  Stretch="Uniform" 
+                                  Margin="0,10,0,0" 
+                                  VerticalAlignment="Top" 
+                                  Width="35" 
+                                  Height="35" />
+
+        <ListBox Grid.Column="0" SelectionMode="Single" SelectionChanged="sidebar_SelectionChanged" x:Name="sidebar" Margin="0,50,0,50" BorderThickness="0">
+            <Separator />
+            <models:NavButton Navlink="/NijhofAddIn;component/Views/LibraryPage.xaml" Margin="3" Padding="6"
+                              Icon="F1 M24,24z M0,0z M6.1,10L4,18 4,8 21,8A2,2,0,0,0,19,6L12,6 10,4 4,4A2,2,0,0,0,2,6L2,18A2,2,0,0,0,4,20L19,20C19.9,20,20.7,19.4,20.9,18.5L23.2,10 6.1,10 M19,18L6,18 7.6,12 20.6,12 19,18z" />
+            <Separator />
+            <models:NavButton Navlink="/NijhofAddIn;component/Views/PrefabPage.xaml" Margin="3" Padding="6"
+                              Icon="F1 M24,24z M0,0z M22,14L20,14 20,16 14,16 14,13 16,13 16,11 14,11 14,6A2,2,0,0,0,12,4L4,4 4,2 2,2 2,10 4,10 4,8 10,8 10,11 8,11 8,13 10,13 10,18A2,2,0,0,0,12,20L20,20 20,22 22,22" />
+            <Separator />
+            <models:NavButton Navlink="/NijhofAddIn;component/Views/FittingListPage.xaml" Margin="3" Padding="6"
+                              Icon="F1 M24,24z M0,0z M22,9L17.21,9 12.83,2.44C12.64,2.16 12.32,2 12,2 11.68,2 11.36,2.16 11.17,2.45L6.79,9 2,9C1.45,9 1,9.45 1,10 1,10.09 1,10.18 1.04,10.27L3.58,19.54C3.81,20.38,4.58,21,5.5,21L18.5,21C19.42,21,20.19,20.38,20.43,19.54L22.97,10.27 23,10C23,9.45,22.55,9,22,9 M12,4.8L14.8,9 9.2,9 12,4.8 M18.5,19L5.5,19 3.31,11 20.7,11 18.5,19 M12,13C10.9,13 10,13.9 10,15 10,16.1 10.9,17 12,17 13.1,17 14,16.1 14,15 14,13.9 13.1,13 12,13z" />
+            <Separator />
+            <models:NavButton Navlink="/NijhofAddIn;component/Views/SawListPage.xaml" Margin="3" Padding="6"
+                              Icon="F1 M24,24z M0,0z M20,15C20,15,18.6,16.3,21.1,17L18.3,19.8 15.5,19.8C15.5,19.8,13.6,19.7,15,22L11,22 9,20C9,20,7.7,18.6,7,21.1L4.2,18.3 4.2,15.5C4.2,15.5,4.3,13.6,2,15L2,11 4,9C4,9,5.4,7.7,2.8,7.1L5.6,4.2 8.5,4.2C8.5,4.2,10.4,4.3,9,2L13,2 15,4C15,4,16.3,5.4,17,2.8L19.8,5.6 19.8,8.5C19.8,8.5,19.7,10.4,22,9L22,13 20,15 M14,12A2,2,0,0,0,12,10A2,2,0,0,0,10,12A2,2,0,0,0,12,14A2,2,0,0,0,14,12z" />
+        </ListBox>
+
+        <Frame Grid.Column="1" x:Name="navframe" NavigationUIVisibility="Hidden" Background="#e9ecef" />
+
     </Grid>
 </Window>

@@ -12,49 +12,37 @@ Project("{486268EC-BF3D-4677-AE7E-0965AE55BC8D}") = "Build", "build\Build.csproj
 EndProject
 Project("{486268EC-BF3D-4677-AE7E-0965AE55BC8D}") = "Installer", "install\Installer.csproj", "{51CB56FD-080F-4206-8ECD-7C1D38466FF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NijhofAddIn", "NijhofAddIn\NijhofAddIn.csproj", "{F9FE742A-DF77-477F-92DF-6042D990AC5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug R20|Any CPU = Debug R20|Any CPU
-		Debug R21|Any CPU = Debug R21|Any CPU
-		Debug R22|Any CPU = Debug R22|Any CPU
-		Debug R23|Any CPU = Debug R23|Any CPU
 		Debug R24|Any CPU = Debug R24|Any CPU
 		Debug R25|Any CPU = Debug R25|Any CPU
-		Release R20|Any CPU = Release R20|Any CPU
-		Release R21|Any CPU = Release R21|Any CPU
-		Release R22|Any CPU = Release R22|Any CPU
-		Release R23|Any CPU = Release R23|Any CPU
 		Release R24|Any CPU = Release R24|Any CPU
 		Release R25|Any CPU = Release R25|Any CPU
 		Installer|Any CPU = Installer|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R20|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R21|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R22|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R23|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R24|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Debug R25|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R20|Any CPU.ActiveCfg = Release|Any CPU
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R21|Any CPU.ActiveCfg = Release|Any CPU
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R22|Any CPU.ActiveCfg = Release|Any CPU
-		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R23|Any CPU.ActiveCfg = Release|Any CPU
 		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R24|Any CPU.ActiveCfg = Release|Any CPU
 		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Release R25|Any CPU.ActiveCfg = Release|Any CPU
 		{D9F419A3-E721-48F4-BEE9-33D95569C093}.Installer|Any CPU.ActiveCfg = Release|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R20|Any CPU.ActiveCfg = Debug|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R21|Any CPU.ActiveCfg = Debug|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R22|Any CPU.ActiveCfg = Debug|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R23|Any CPU.ActiveCfg = Debug|Any CPU
 		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R24|Any CPU.ActiveCfg = Debug|Any CPU
 		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Debug R25|Any CPU.ActiveCfg = Debug|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R20|Any CPU.ActiveCfg = Release|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R21|Any CPU.ActiveCfg = Release|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R22|Any CPU.ActiveCfg = Release|Any CPU
-		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R23|Any CPU.ActiveCfg = Release|Any CPU
 		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R24|Any CPU.ActiveCfg = Release|Any CPU
 		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Release R25|Any CPU.ActiveCfg = Release|Any CPU
 		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Installer|Any CPU.ActiveCfg = Release|Any CPU
 		{51CB56FD-080F-4206-8ECD-7C1D38466FF9}.Installer|Any CPU.Build.0 = Release|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Debug R24|Any CPU.ActiveCfg = Debug R24|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Debug R24|Any CPU.Build.0 = Debug R24|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Debug R25|Any CPU.ActiveCfg = Debug R25|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Debug R25|Any CPU.Build.0 = Debug R25|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Release R24|Any CPU.ActiveCfg = Release R24|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Release R24|Any CPU.Build.0 = Release R24|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Release R25|Any CPU.ActiveCfg = Release R25|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Release R25|Any CPU.Build.0 = Release R25|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Installer|Any CPU.ActiveCfg = Release R24|Any CPU
+		{F9FE742A-DF77-477F-92DF-6042D990AC5E}.Installer|Any CPU.Build.0 = Release R24|Any CPU
 	EndGlobalSection
 EndGlobal

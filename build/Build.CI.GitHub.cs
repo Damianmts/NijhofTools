@@ -44,7 +44,8 @@ sealed partial class Build
         var latestTag = tags.First().Text;
         if (latestTag == GitRepository.Commit) return;
 
-        Assert.False(latestTag == Version, $"A Release with the specified tag already exists in the repository: {Version}");
+        Assert.False(latestTag == Version,
+            $"A Release with the specified tag already exists in the repository: {Version}");
         Log.Information("Version: {Version}", Version);
     }
 

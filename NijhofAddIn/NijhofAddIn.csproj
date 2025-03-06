@@ -43,17 +43,38 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.2" />
         <PackageReference Include="Nice3point.Revit.Build.Tasks" Version="2.*"/>
         <PackageReference Include="Nice3point.Revit.Toolkit" Version="$(RevitVersion).*"/>
         <PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*"/>
         <PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*"/>
         <PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*"/>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*"/>
+        <PackageReference Include="Syncfusion.Licensing" Version="28.2.9" />
+        <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="28.2.9" />
+        <PackageReference Include="Syncfusion.SfTreeView.WPF" Version="28.2.9" />
+        <PackageReference Include="Syncfusion.Shared.WPF" Version="28.2.9" />
+        <PackageReference Include="System.Text.Json" Version="9.0.2" />
+        <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
     </ItemGroup>
 
     <ItemGroup>
         <Resource Include="Resources\Icons\RibbonIcon16.png"/>
         <Resource Include="Resources\Icons\RibbonIcon32.png"/>
+        <None Remove="Resources\Icons\NijhofLogo.png" />
+        <Resource Include="Resources\Icons\NijhofLogo.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <COMReference Include="Shell32">
+        <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+        <VersionMajor>1</VersionMajor>
+        <VersionMinor>0</VersionMinor>
+        <Lcid>0</Lcid>
+        <WrapperTool>tlbimp</WrapperTool>
+        <Isolated>False</Isolated>
+        <EmbedInteropTypes>True</EmbedInteropTypes>
+      </COMReference>
     </ItemGroup>
 
 </Project>
