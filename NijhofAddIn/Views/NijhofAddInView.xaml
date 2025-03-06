@@ -5,7 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:viewModel="clr-namespace:NijhofAddIn.ViewModels"
-    xmlns:models="clr-namespace:NijhofAddIn.Models"
+    xmlns:models="clr-namespace:NijhofAddIn.Models.UI"
     mc:Ignorable="d"
     d:DataContext="{d:DesignInstance viewModel:NijhofAddInViewModel}"
     ResizeMode="CanResize"

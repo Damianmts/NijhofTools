@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NijhofAddIn.Models;
+namespace NijhofAddIn.Models.UI;
 
 public class NavButton : ListBoxItem
 {

@@ -5,9 +5,6 @@ using NijhofAddIn.Views;
 
 namespace NijhofAddIn.Commands;
 
-/// <summary>
-///     External command entry point invoked from the Revit interface
-/// </summary>
 [UsedImplicitly]
 [Transaction(TransactionMode.Manual)]
 public class StartupCommand : ExternalCommand
