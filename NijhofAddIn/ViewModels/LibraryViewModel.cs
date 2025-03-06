@@ -11,6 +11,31 @@ using System.Text;
 
 namespace NijhofAddIn.ViewModels;
 
+//TODO Models maken voor 'Laden', 'Plaatsen' en 'Sluiten'.
+
+/// <summary>
+/// Revit custom content library
+/// 
+/// Beheert de bestandsstructuur en weergave in een WPF-applicatie.
+/// Bevat twee hoofdklassen:
+/// - FileItem: Voor individuele bestands- en maprepresentatie met thumbnail ondersteuning
+/// - LibraryViewModel: Voor het beheren van de algemene bestandsstructuur en selecties
+/// 
+/// FileItem functionaliteiten:
+/// - Bestandsinformatie beheer (naam, pad, weergavenaam)
+/// - Thumbnail generatie en caching
+/// - Asynchrone bestandsverwerking
+/// - Subbestand collectie beheer
+/// 
+/// LibraryViewModel functionaliteiten:
+/// - Beheer van root bestanden en mappen
+/// - Geselecteerde map tracking
+/// - Dynamische mapinhoud weergave
+/// - Recursieve mapstructuur laden
+/// 
+/// Implementeert MVVM-patroon met Observable Collections voor real-time UI updates.
+/// </summary>
+
 public class FileItem : INotifyPropertyChanged
     {
         private static readonly SemaphoreSlim _thumbnailSemaphore = new SemaphoreSlim(4);

@@ -1,5 +1,5 @@
 ﻿using System.Windows.Controls;
-using NijhofAddIn.Models;
+using NijhofAddIn.Models.UI;
 using NijhofAddIn.ViewModels;
 
 namespace NijhofAddIn.Views;

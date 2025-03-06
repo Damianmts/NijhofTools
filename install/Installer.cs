@@ -16,8 +16,8 @@ var project = new Project
     UI = WUI.WixUI_FeatureTree,
     MajorUpgrade = MajorUpgrade.Default,
     GUID = new Guid("D2FF292E-91A5-44B6-BCF7-BCEF125A7EE3"),
-    BannerImage = @"install\Resources\Icons\BannerImage.png",
-    BackgroundImage = @"install\Resources\Icons\BackgroundImage.png",
+    BannerImage = @"install\Resources\Icons\NijhofBannerImage.png",
+    BackgroundImage = @"install\Resources\Icons\NijhofBackgroundImage.png",
     Version = Assembly.GetExecutingAssembly().GetName().Version.ClearRevision(),
     ControlPanelInfo =
     {
