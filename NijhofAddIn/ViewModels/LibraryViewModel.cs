@@ -35,8 +35,7 @@ public class FileItem : INotifyPropertyChanged
             
             LoadThumbnailAsync();
         }
-
-        // Genereer een unieke cache-bestandsnaam op basis van FullPath
+        
         private string GetCacheFilePath()
         {
             using (var md5 = MD5.Create())
@@ -46,14 +45,12 @@ public class FileItem : INotifyPropertyChanged
                 return Path.Combine(cacheFolder, hash + ".png");
             }
         }
-
-        // Verkrijg de laatste wijzigingstijd van het originele bestand (UTC)
+        
         private DateTime GetFileLastWriteTime()
         {
             return File.GetLastWriteTimeUtc(FullPath);
         }
-
-        // Controleer of de cache geldig is (dus niet verouderd ten opzichte van het originele bestand)
+        
         private bool IsCacheValid(string cacheFilePath)
         {
             if (!File.Exists(cacheFilePath))
@@ -61,8 +58,7 @@ public class FileItem : INotifyPropertyChanged
 
             DateTime cachedTime = File.GetLastWriteTimeUtc(cacheFilePath);
             DateTime currentFileTime = GetFileLastWriteTime();
-
-            // Als het originele bestand nieuwer is dan de cache, is de cache ongeldig
+            
             return currentFileTime <= cachedTime;
         }
 
@@ -70,16 +66,13 @@ public class FileItem : INotifyPropertyChanged
         {
             try
             {
-                // Eerst kijken of we deze thumbnail al in de in-memory cache hebben
                 if (_thumbnailCache.TryGetValue(FullPath, out BitmapImage cachedImage))
                 {
                     Thumbnail = cachedImage;
                     return;
                 }
-
-                // Genereer het pad naar de cachefile
+                
                 string cacheFilePath = GetCacheFilePath();
-                // Als een cachebestand bestaat én geldig is, laden we deze
                 if (File.Exists(cacheFilePath) && IsCacheValid(cacheFilePath))
                 {
                     System.Windows.Application.Current.Dispatcher.Invoke(() =>
@@ -107,14 +100,12 @@ public class FileItem : INotifyPropertyChanged
                             {
                                 using (var resized = ResizeBitmap(shellThumb, 256, 256))
                                 {
-                                    // Sla de resized bitmap op als bestand in de cachemap
                                     using (var memory = new MemoryStream())
                                     {
                                         resized.Save(memory, System.Drawing.Imaging.ImageFormat.Png);
                                         File.WriteAllBytes(cacheFilePath, memory.ToArray());
                                     }
-
-                                    // Update de timestamp van het cachebestand zodat deze overeenkomt met de bronfile
+                                    
                                     File.SetLastWriteTimeUtc(cacheFilePath, GetFileLastWriteTime());
 
                                     var bitmapImage = ConvertToBitmapImage(resized);
@@ -164,7 +155,7 @@ public class FileItem : INotifyPropertyChanged
                 bitmapImage.StreamSource = memory;
                 bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
                 bitmapImage.EndInit();
-                bitmapImage.Freeze(); // Voor thread-safety
+                bitmapImage.Freeze();
 
                 return bitmapImage;
             }
@@ -238,15 +229,13 @@ public class LibraryViewModel : ObservableObject
 
         try
         {
-            // Bestanden in de huidige map laden
             var files = Directory.GetFiles(SelectedFolder.FullPath)
                 .Where(f => Path.GetExtension(f).ToLower() is ".rfa");
             foreach (var file in files)
             {
                 SelectedFolderContent.Add(new FileItem(file));
             }
-
-            // Recursief alle bestanden uit submappen laden
+            
             LoadFilesFromSubfolders(SelectedFolder.FullPath);
         }
         catch (Exception ex)
@@ -259,7 +248,6 @@ public class LibraryViewModel : ObservableObject
     {
         try
         {
-            // Bestanden uit alle submappen laden
             foreach (var subDir in Directory.GetDirectories(folderPath))
             {
                 var files = Directory.GetFiles(subDir);
@@ -267,8 +255,7 @@ public class LibraryViewModel : ObservableObject
                 {
                     SelectedFolderContent.Add(new FileItem(file));
                 }
-
-                // Recursief door submappen gaan
+                
                 LoadFilesFromSubfolders(subDir);
             }
         }
@@ -284,7 +271,6 @@ public class LibraryViewModel : ObservableObject
         string rootPath = @"F:\Stabiplan\Custom\Families";
         if (Directory.Exists(rootPath))
         {
-            // Direct de submappen laden in RootFiles in plaats van eerst een rootItem aan te maken
             var directories = Directory.GetDirectories(rootPath);
             foreach (var directory in directories)
             {
@@ -299,7 +285,6 @@ public class LibraryViewModel : ObservableObject
     {
         try
         {
-            // Laad alle submappen
             var directories = Directory.GetDirectories(parentItem.FullPath);
             foreach (var directory in directories)
             {
